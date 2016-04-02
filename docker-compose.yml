@@ -1,7 +1,9 @@
-java:
-    build: .
-    container_name: "java"
-    net: "host"
-    volumes:
-        - /home/vagrant:/home/developer
-    user: 1000:1000
+version: '2'
+services:
+    configuration-server:
+        build: .
+        container_name: "configuration-server"
+        net: "host"
+        restart: always
+        environment:
+            SPRING_CLOUD_CONSUL_HOST: 192.168.1.227
