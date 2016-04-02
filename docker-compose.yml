@@ -3,7 +3,7 @@ services:
     configuration-server:
         build: .
         container_name: "configuration-server"
-        net: "host"
+        network_mode: "host"
         restart: always
         environment:
             SPRING_CLOUD_CONSUL_HOST: 192.168.1.227
