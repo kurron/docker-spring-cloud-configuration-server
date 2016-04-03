@@ -1,4 +1,4 @@
-FROM kurron/docker-oracle-jdk-8:latest
+FROM kurron/docker-oracle-jdk-8:1.8.0_77
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
 
