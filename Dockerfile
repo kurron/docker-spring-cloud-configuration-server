@@ -10,5 +10,7 @@ RUN mkdir /etc/service/configuration-server
 ADD service.sh /etc/service/configuration-server/run
 RUN chmod a+x /etc/service/configuration-server/run
 
+EXPOSE 2020
+
 # start the init service
 ENTRYPOINT ["/sbin/my_init"]
