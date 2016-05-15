@@ -9,7 +9,7 @@ CMD="docker run \
        --env SPRING_CLOUD_CONSUL_HOST=192.168.1.227 \
        --env JVM_JMX_HOST=192.168.1.227 \
        --env JVM_JMX_PORT=1999 \
-       kurron/docker-spring-cloud-configuration-server:1.0.4"
+       kurron/docker-spring-cloud-configuration-server:1.1.0"
 
 echo eval $CMD
 eval $CMD $*
