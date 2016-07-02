@@ -2,6 +2,7 @@ version: '2'
 services:
     configuration-server:
         build: .
+        image: configuration-server:compose
         container_name: "configuration-server"
         network_mode: "bridge"
         restart: always
