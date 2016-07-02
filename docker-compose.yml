@@ -3,10 +3,17 @@ services:
     configuration-server:
         build: .
         container_name: "configuration-server"
-        network_mode: "host"
+        network_mode: "bridge"
         restart: always
+        ports:
+        - "8080:8080"
+        - "2020:2020"
         environment:
             SPRING_CLOUD_CONSUL_HOST: 192.168.1.227
-            JVM_HEAP_MAX: 768m
-            JVM_JMX_HOST: 127.0.0.1
-            JVM_JMX_PORT: 1999
+            SPRING_PROFILES_ACTIVE: "default"
+            JVM_HEAP_MIN: "128m"
+            JVM_HEAP_MAX: "768m"
+            JVM_JMX_PORT: "2020"
+            JVM_JMX_RMI_PORT: "2020"
+            JVM_JMX_HOST: "10.0.2.15"
+            SERVER_PORT: "8080"
