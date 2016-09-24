@@ -12,7 +12,7 @@ CMD="docker run \
        --env JVM_JMX_HOST=10.0.2.15 \
        --env JVM_JMX_PORT=2020 \
        --env JVM_JMX_RMI_PORT=2020 \
-       kurron/docker-spring-cloud-configuration-server:1.2.0"
+       kurron/docker-spring-cloud-configuration-server:1.4.0"
 
 echo eval $CMD
 eval $CMD $*
